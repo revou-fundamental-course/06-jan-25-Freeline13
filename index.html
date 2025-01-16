@@ -1,12 +1,139 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title></title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <h1>Hi <span id="name">Teguh</span> Welcome to my Web!</h1>
-        <p>This is paragraph</p>
-        <script src="js/script.js"></script>
-    </body>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- Logo & Navigation -->
+    <header class="main-header">
+        <img class="logo-icon" src="./image/user.jpg" alt="Profile" />
+        <div class="menu">
+            <a class="tombol-menu">
+                <span class="garis"></span>
+                <span class="garis"></span>
+                <span class="garis"></span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home-page" class="left-rounded">Home</a>
+                <a href="#our-headquarter">Our Headquarter</a>
+                <a href="#message-us" class="right-rounded">Message Us</a>
+            </nav>
+        </div>
+    </header>
+
+    <hr />
+
+    <!-- Welcome Speech -->
+    <section class="welcome-speech">
+        <div class="welcome-content">
+            <h1>Welcome to Our Website, <span id="username">Guest</span>!</h1>
+            <p>We are delighted to have you here. Explore our services and discover what makes us unique. Our commitment to excellence and innovation drives us to provide the best experience for our valued visitors.</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Page -->
+        <section class="slider" id="home-page">
+            <div class="slide">
+                <img src="image/v1.jpg" alt="Welcome">
+            </div>
+            <div class="slide">
+                <img src="image/v2.jpg" alt="Explore">
+            </div>
+            <div class="slide">
+                <img src="image/v3.jpg" alt="Enjoy">
+            </div>
+        </section>
+
+        <!-- Our Profile -->
+<section id="our-headquarter">
+    <h1>Our Headquarter</h1>
+    <div class="image-slider">
+        <div class="hq-container">
+            <div class="circle">
+                <img src="image/a1.jpg" alt="HQ 1">
+            </div>
+            <div class="location-info">
+                <h3>Jakarta</h3>
+            </div>
+        </div>
+        <div class="hq-container">
+            <div class="circle">
+                <img src="image/a2.jpg" alt="HQ 2">
+            </div>
+            <div class="location-info">
+                <h3>Bali</h3>
+            </div>
+        </div>
+        <div class="hq-container">
+            <div class="circle">
+                <img src="image/a3.jpg" alt="HQ 3">
+            </div>
+            <div class="location-info">
+                <h3>Bandung</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Message Us -->
+        <section id="message-us">
+            <h1>Message Us</h1>
+            <div class="message-container">
+                <form onsubmit="return validateForm()">
+                    <table>
+                        <tr>
+                            <td><label for="name">Nama:</label></td>
+                            <td><input type="text" id="name" placeholder="Nama"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="dob">Tanggal Lahir:</label></td>
+                            <td><input type="date" id="dob"></td>
+                        </tr>
+                        <tr>
+                            <td><label>Jenis Kelamin:</label></td>
+                            <td>
+                                <input type="radio" name="gender" value="Laki-Laki" id="male">
+                                <label for="male">Laki-Laki</label>
+                                <input type="radio" name="gender" value="Perempuan" id="female">
+                                <label for="female">Perempuan</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><label for="message">Pesan:</label></td>
+                            <td><textarea id="message" placeholder="Pesan"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center;">
+                                <button type="submit">Submit</button>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+                <div id="output-box">
+                    <p><strong>Current Time:</strong> <span id="time"></span></p>
+                    <p><strong>Nama:</strong> <span id="outputName"></span></p>
+                    <p><strong>Tanggal Lahir:</strong> <span id="outputDob"></span></p>
+                    <p><strong>Jenis Kelamin:</strong> <span id="outputGender"></span></p>
+                    <p><strong>Pesan:</strong> <span id="outputMessage"></span></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <hr />
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 - All rights reserved</p>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
 </html>

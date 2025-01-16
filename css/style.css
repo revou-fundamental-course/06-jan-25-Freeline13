@@ -1,4 +1,388 @@
-html, body {
+
+/* General Styles */
+body {
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    margin-top: 80px;
+}
+
+/* Header Styles */
+.main-header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.main-header.shrink {
+    height: 50px; /* Tinggi saat navbar menyusut */
+    line-height: 50px;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;   
+}
+
+.menu {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #e9ecef;
+}
+.left-rounded {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.right-rounded {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.garis {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s;
+}
+
+/* Welcome Speech Styles */
+.welcome-speech {
+    background-color:rgb(58, 62, 65);
+    padding: 4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.welcome-content h1 {
+    color: #FFC0CB;
+    margin-bottom: 1rem;
+}
+
+#username {
+    color: #FF1493;
+    font-weight: bold;
+}
+
+.welcome-content p {
+    color: #FFC0CB;
+    line-height: 1.6;
+}
+
+/* Slider Styles */
+.slider {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide {
+    position: relative;
+    width: 100%;
+    height: 450px;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Our Headquarter Styles */
+#our-headquarter {
+    text-align: center;
+    padding: 2rem;
+}
+
+.image-slider {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.hq-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+}
+
+.circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 3px solid #f0f0f0;
+    transition: transform 0.3s ease;
+}
+
+.circle:hover {
+    transform: scale(1.05);
+}
+
+.circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Message Us Styles */
+#message-us {
+    padding: 2rem;
+}
+
+.message-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+form {
+    flex: 1;
+}
+
+table {
+    width: 100%;
+}
+
+table td {
+    padding: 0.5rem;
+}
+
+input[type="text"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button {
+    background-color:rgb(221, 46, 134);
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:rgb(224, 151, 163);
+}
+
+#output-box {
+    justify-content: flex-end;
+    flex: 1;
+    padding: 1rem;
+    background-color:rgb(250, 248, 249);
+    border-radius: 8px;
+    border: 1px solid rgb(0, 0, 0);
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Header Mobile */
+    .tombol-menu {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        flex-direction: column;
+        background-color: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        min-width: 200px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        text-align: center;
+        padding: 0.75rem;
+    }
+
+    .left-rounded, .right-rounded {
+        border-radius: 0;
+    }
+
+    /* Welcome Mobile */
+    .welcome-speech {
+        padding: 1rem;
+    }
+    
+    .welcome-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .welcome-content p {
+        font-size: 0.9rem;
+    }
+
+    /* Slider Mobile */
+    .slider {
+        height: 300px;
+    }
+    
+    .slide {
+        height: 300px;
+    }
+    
+    .slide-content {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+    }
+
+    /* Headquarter Mobile */
+    #our-headquarter h1 {
+        font-size: 1.5rem;
+    }
+    
+    .image-slider {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    .hq-container {
+        width: 90%;
+        max-width: 300px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .circle {
+        width: 180px;
+        height: 180px;
+    }
+
+    /* Message Us Mobile */
+    #message-us h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .message-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    form table td {
+        display: block;
+        width: 100%;
+        padding: 0.25rem 0;
+    }
+    
+    button {
+        width: 100%;
+        padding: 0.75rem;
+        margin: 0.5rem 0;
+    }
+    
+    #output-box {
+        margin-top: 1.5rem;
+    }
+}
+
+/* Extra Small Screen Adjustments */
+@media (max-width: 480px) {
+
+    .nav-links {
+        display: none;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .welcome-content {
+        padding: 0.5rem;
+    }
+    
+    .slider {
+        height: 250px;
+    }
+    
+    .slide {
+        height: 250px;
+    }
+    
+    .circle {
+        width: 150px;
+        height: 150px;
+    }
+    
+    form table td {
+        font-size: 0.9rem;
+    }
+
+    .location-info {
+        padding: 0.75rem;
+    }
 }
